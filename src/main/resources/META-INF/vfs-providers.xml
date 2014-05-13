@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<providers>
+    <provider class-name="org.mvnsearch.vfs.provider.zk.ZooKeeperFileProvider">
+        <scheme name="zk"/>
+    </provider>
+    <operationProvider class-name="org.mvnsearch.vfs.provider.zk.ZooKeeperFileOperationsProvider">
+        <scheme name="zk"/>
+    </operationProvider>
+</providers>

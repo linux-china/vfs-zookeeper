@@ -6,7 +6,7 @@ import org.apache.commons.vfs2.FileSystemOptions;
 import org.apache.commons.vfs2.provider.AbstractFileName;
 import org.apache.commons.vfs2.provider.AbstractFileSystem;
 import org.apache.commons.vfs2.provider.GenericFileName;
-import org.apache.curator.CuratorZookeeperClient;
+import org.apache.curator.framework.CuratorFramework;
 
 import java.util.Collection;
 
@@ -16,10 +16,9 @@ import java.util.Collection;
  * @author linux_china
  */
 public class ZooKeeperFileSystem extends AbstractFileSystem {
-    private CuratorZookeeperClient curator;
+    private CuratorFramework curator;
 
-    public ZooKeeperFileSystem(final GenericFileName rootName, final CuratorZookeeperClient curator,
-                               final FileSystemOptions fileSystemOptions) {
+    public ZooKeeperFileSystem(GenericFileName rootName, CuratorFramework curator, FileSystemOptions fileSystemOptions) {
         super(rootName, null, fileSystemOptions);
         this.curator = curator;
     }
